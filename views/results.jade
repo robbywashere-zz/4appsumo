@@ -1,0 +1,14 @@
+extends layout
+
+block content
+  h1= title
+
+
+  h2 Questions
+
+  ul
+  each question in questions
+      = question.text
+      ul
+          each answer in question.Answers
+            li #{answer.text} - #{answer.count}

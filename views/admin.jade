@@ -1,0 +1,33 @@
+extends layout
+
+block content
+  h1= title
+
+  h2 Creating a new question
+  form(action="/admin/questions/create", method="post")
+    input(type="text", name="text")
+    input(type="submit")
+
+  h2 Questions
+
+  ul
+  each question in questions
+    li
+      = question.text
+      | &nbsp;
+      | (
+      a(href="/admin/questions/" + question.id + "/destroy") Destroy
+      | )
+      ul
+        li
+          | Creating a new answer:
+          form(action="/admin/questions/" + question.id + "/answers/create", method="post", style="display: inline")
+            input(type="text", name="text")
+            input(type="submit")
+        each answer in question.Answers
+          li
+            = answer.text
+            | &nbsp;
+            | (
+            a(href="/admin/questions/" + question.id + "/answers/" + answer.id + "/destroy") Destroy
+            | )

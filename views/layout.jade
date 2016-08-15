@@ -1,0 +1,14 @@
+doctype html
+html
+  head
+    title= title
+    link(rel='stylesheet', href='/stylesheets/style.css')
+  body
+    ul(style="display:inline")
+      li(style="display:inline")
+        a(href="/admin") Create Answers
+      li(style="display:inline")
+        a(href="/reset") Unhide Questions
+      li(style="display:inline")
+        a(href="/admin/questions/results") Show Results
+    block content

@@ -1,0 +1,19 @@
+extends layout
+
+block content
+  h1= title
+
+  if !question
+    h2 Sorry no more questions...
+  else
+    h2 #{question.text}
+    form(action="/question/#{question.id}/answer", method="post")
+      each answer in question.Answers
+        input(type="radio", name='answer', id=answer.id, value=answer.id)
+        label(for=answer.id) #{answer.text}
+        br
+
+
+      br
+      input(type="submit", value="Submit")
+
