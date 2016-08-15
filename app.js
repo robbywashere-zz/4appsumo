@@ -22,7 +22,7 @@ if (app.get('env') === 'development') {
   app.locals.pretty = true;
 }
 
-app.all('/admin', (req, res, next) => {
+app.all('/admin/*', (req, res, next) => {
   const unauthorized = (response) => {
     response.set('WWW-Authenticate', 'Basic realm=Authorization Required');
     return res.send(401);
