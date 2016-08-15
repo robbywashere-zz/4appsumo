@@ -4,9 +4,18 @@
     "storage": "./db.development.sqlite"
   },
   "test": {
-    "use_env_variable": "DATABASE_URL"
+    "username": "root",
+    "password": null,
+    "database": "database_test",
+    "host": "127.0.0.1",
+    "dialect": "mysql"
   },
   "production": {
-    "use_env_variable": "DATABASE_URL"
+    "username": "vifarnwdorlrfd",
+    "password": "IU29zg-ueYXiOGHA2upHgrpwL4",
+    "port": 5432,
+    "database": "d6ajandjsv0rr2",
+    "host": "ec2-23-23-95-27.compute-1.amazonaws.com",
+    "dialect": "postgres"
   }
 }
