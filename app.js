@@ -11,6 +11,8 @@ const models = require('./models');
 
 const app = express();
 
+app.set('port', process.env.PORT || 3000);
+
 app.use(cookieSession({
   name: 'session',
   secret: 'foobar',
