@@ -7,6 +7,7 @@ const basicAuth = require('basic-auth');
 const routes = require('./routes/index');
 const questions = require('./routes/questions');
 const cookieSession = require('cookie-session');
+const models = require('./models');
 
 const app = express();
 
@@ -75,6 +76,10 @@ app.use((err, req, res) => {
   });
 });
 
+
+models.sequelize.sync().then(function () {
+  app.listen(app.get('port') || 3000);
+});
 
 module.exports = app;
 
