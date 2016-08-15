@@ -11,7 +11,11 @@
     "dialect": "mysql"
   },
   "production": {
-    "dialect": "sqlite",
-    "storage": "./db.development.sqlite"
+    "username": "vifarnwdorlrfd",
+    "password": "IU29zg-ueYXiOGHA2upHgrpwL4",
+    "port": 5432,
+    "database": "d6ajandjsv0rr2",
+    "host": "ec2-23-23-95-27.compute-1.amazonaws.com",
+    "dialect": "postgres"
   }
 }
